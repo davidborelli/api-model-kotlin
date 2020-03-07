@@ -1,0 +1,117 @@
+spring:
+  security:
+    oauth2:
+
+      client:
+        registration:
+          angular:
+            client-id: angular
+            client-secret: '@ngul@r0'
+            client-name: angular
+            scope: read, write
+            authorization-grant-type: password
+
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    hibernate:
+      naming:
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  flyway:
+    baseline-on-migrate: false
+    enabled: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    name: default
+    url: jdbc:postgresql://localhost:5432/gimbdb
+multitenant:
+  app:
+    lclUsername: postgres
+    lclPassword: postgres
+    lclDataSources:
+      -
+        name: localhost
+        url: jdbc:postgresql://localhost:5432/gimbdb
+#      -
+#        name: multartec
+#        url: jdbc:postgresql://localhost:5432/gimbdb.multartec
+#     -
+#       name: testedoido
+#       url: jdbc:postgresql://localhost:5432/gimbdb.testedoido
+#    prdUsername: postgres
+#    prdPassword: postgres
+#    prdDataSources:
+#      -
+#        name: multar
+#        url: jdbc:mysql://localhost:3306/gimbdb.multar?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: multartec
+#        url: jdbc:mysql://localhost:3306/gimbdb.multartec?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: solis
+#        url: jdbc:mysql://localhost:3306/gimbdb.solis?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: pampili
+#        url: jdbc:mysql://localhost:3306/gimbdb.pampili?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: pecompe
+#        url: jdbc:mysql://localhost:3306/gimbdb.pecompe?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: raizen
+#        url: jdbc:mysql://localhost:3306/gimbdb.raizen?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: zenega
+#        url: jdbc:mysql://localhost:3306/gimbdb.zenega?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: expert-radiocom
+#        url: jdbc:mysql://localhost:3306/gimbdb.expert-radiocom?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: tecaut
+#        url: jdbc:mysql://localhost:3306/gimbdb.tecaut?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: grupoferrante
+#        url: jdbc:mysql://localhost:3306/gimbdb.grupoferrante?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: solinftec
+#        url: jdbc:mysql://localhost:3306/gimbdb.solinftec?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: itaetemaquinas
+#        url: jdbc:mysql://localhost:3306/gimbdb.itaetemaquinas?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#    pocUsername: postgres
+#    pocPassword: postgres
+#    pocDataSources:
+#      -
+#        name: poc0001
+#        url: jdbc:mysql://localhost:3306/gimbdb.poc0001?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: poc0002
+#        url: jdbc:mysql://localhost:3306/gimbdb.poc0002?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: poc0003
+#        url: jdbc:mysql://localhost:3306/gimbdb.poc0003?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: poc0004
+#        url: jdbc:mysql://localhost:3306/gimbdb.poc0004?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: poc0005
+#        url: jdbc:mysql://localhost:3306/gimbdb.poc0005?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: poc0006
+#        url: jdbc:mysql://localhost:3306/gimbdb.poc0006?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: poc0007
+#        url: jdbc:mysql://localhost:3306/gimbdb.poc0007?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: poc0008
+#        url: jdbc:mysql://localhost:3306/gimbdb.poc0008?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: poc0009
+#        url: jdbc:mysql://localhost:3306/gimbdb.poc0009?verifyServerCertificate=false&useSSL=false&autoReconnect=true
+#      -
+#        name: poc0010
+#        url: jdbc:mysql://localhost:3306/gimbdb.poc0010?verifyServerCertificate=false&useSSL=false&autoReconnect=true
